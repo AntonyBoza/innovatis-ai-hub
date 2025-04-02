@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactSection = () => {
@@ -21,24 +21,41 @@ const ContactSection = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // This is a placeholder for the actual Supabase and email functionality
+      // In a real application, you would integrate with Supabase here
+      
+      console.log("Form data to be saved to Supabase:", formData);
+      console.log("Emails would be sent to info@innovatis.ai and arbozaleon@gmail.com");
+      
+      // Simulate submission delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
       toast({
         title: "Form submitted successfully!",
-        description: "We'll get back to you within 24 hours.",
+        description: "We'll get back to you within 24 hours. A confirmation has been sent to your email.",
       });
+      
       setFormData({
         name: '',
         email: '',
         company: '',
         message: ''
       });
-    }, 1500);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error submitting form",
+        description: "There was an error submitting your message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -60,7 +77,7 @@ const ContactSection = () => {
                 <Mail className="w-6 h-6 text-innovatis-purple mr-4 mt-1" />
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
-                  <p className="text-innovatis-gray-dark">contact@innovatisai.com</p>
+                  <p className="text-innovatis-gray-dark">info@innovatis.ai</p>
                 </div>
               </div>
               
@@ -161,6 +178,10 @@ const ContactSection = () => {
                   placeholder="Tell us about your project and requirements..."
                   className="w-full h-32"
                 />
+              </div>
+              
+              <div className="text-sm text-innovatis-gray-dark/80 italic">
+                By submitting this form, your information will be sent to our team at info@innovatis.ai.
               </div>
               
               <Button

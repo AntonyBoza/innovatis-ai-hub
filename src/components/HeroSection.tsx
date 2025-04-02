@@ -1,8 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
+import CalendlyModal from './CalendlyModal';
 
 const HeroSection = () => {
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -26,7 +29,7 @@ const HeroSection = () => {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <Button 
-              onClick={scrollToContact}
+              onClick={() => setIsCalendlyOpen(true)}
               className="bg-innovatis-blue hover:bg-innovatis-blue/90 text-white px-8 py-6 text-lg"
               size="lg"
             >
@@ -57,6 +60,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      
+      <CalendlyModal isOpen={isCalendlyOpen} onClose={() => setIsCalendlyOpen(false)} />
     </section>
   );
 };
