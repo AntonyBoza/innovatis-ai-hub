@@ -82,6 +82,24 @@ function innovatis_ai_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	// Add support for block templates
+	add_theme_support( 'block-templates' );
+	
+	// Add support for core block visual styles.
+	add_theme_support( 'wp-block-styles' );
+	
+	// Add support for full and wide align images.
+	add_theme_support( 'align-wide' );
+	
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
+	
+	// Add support for responsive embeds.
+	add_theme_support( 'responsive-embeds' );
+	
+	// Add theme support for core block template parts
+	add_theme_support( 'block-template-parts' );
 }
 add_action( 'after_setup_theme', 'innovatis_ai_setup' );
 
@@ -103,3 +121,24 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Register block patterns and categories.
+ */
+function innovatis_ai_register_block_patterns() {
+	if ( function_exists( 'register_block_pattern_category' ) ) {
+		register_block_pattern_category(
+			'innovatis',
+			array( 'label' => __( 'InnovatisAI', 'innovatis-ai' ) )
+		);
+	}
+}
+add_action( 'init', 'innovatis_ai_register_block_patterns' );
+
+/**
+ * Add block editor support
+ */
+function innovatis_ai_block_editor_styles() {
+	wp_enqueue_style( 'innovatis-ai-editor-styles', get_theme_file_uri( '/assets/css/editor-style.css' ), array(), INNOVATIS_AI_VERSION );
+}
+add_action( 'enqueue_block_editor_assets', 'innovatis_ai_block_editor_styles' );

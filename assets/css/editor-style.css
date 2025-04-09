@@ -1,0 +1,48 @@
+
+/* Editor styles for block editor */
+.editor-styles-wrapper .wp-block {
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editor-styles-wrapper .wp-block[data-align="wide"] {
+  max-width: 1100px;
+}
+
+.editor-styles-wrapper .wp-block[data-align="full"] {
+  max-width: none;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.editor-styles-wrapper h1 {
+  font-size: 2.5rem;
+}
+
+.editor-styles-wrapper h2 {
+  font-size: 2rem;
+}
+
+.editor-styles-wrapper h3 {
+  font-size: 1.75rem;
+}
+
+/* InnovatisAI color scheme */
+:root {
+  --innovatis-blue: #3b82f6;
+  --innovatis-purple: #8b5cf6;
+  --innovatis-teal: #14b8a6;
+  --innovatis-gray-light: #f9fafb;
+  --innovatis-gray-dark: #4b5563;
+}

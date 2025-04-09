@@ -9,8 +9,8 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: innovatis-ai
-Tags: innovatis, ai, artificial intelligence, consulting, corporate, business
-Requires at least: 5.3
+Tags: innovatis, ai, artificial intelligence, consulting, corporate, business, block-templates
+Requires at least: 5.9
 Tested up to: 6.4
 Requires PHP: 7.4
 */
@@ -72,6 +72,49 @@ Requires PHP: 7.4
 
 .wp-block-button__link:hover {
   background-color: #2563eb;
+}
+
+/* Block template support */
+.wp-block-template-part {
+  margin: 0;
+}
+
+.wp-site-blocks {
+  padding: 0;
+}
+
+.wp-block-query {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.wp-block-post-template {
+  display: grid;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.wp-block-post-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.wp-block-post-excerpt {
+  margin-top: 1rem;
+}
+
+.wp-block-post-featured-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wp-block-query-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
 }
 
 /* WordPress specific classes */
