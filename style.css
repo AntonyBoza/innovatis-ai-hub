@@ -10,6 +10,9 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: innovatis-ai
 Tags: innovatis, ai, artificial intelligence, consulting, corporate, business
+Requires at least: 5.3
+Tested up to: 6.4
+Requires PHP: 7.4
 */
 
 /* This is the main stylesheet for the WordPress theme */
