@@ -59,6 +59,12 @@ const Navbar = () => {
             >
               Contact
             </button>
+            <a 
+              href="/blog"
+              className="text-innovatis-gray-dark hover:text-innovatis-blue transition-colors"
+            >
+              Blog
+            </a>
             <Button 
               onClick={() => scrollToSection('contact')}
               className="bg-innovatis-blue hover:bg-innovatis-blue/90 text-white"
@@ -105,6 +111,12 @@ const Navbar = () => {
             >
               Contact
             </button>
+            <a
+              href="/blog"
+              className="block w-full text-left py-2 text-innovatis-gray-dark hover:text-innovatis-blue transition-colors"
+            >
+              Blog
+            </a>
             <Button 
               onClick={() => scrollToSection('contact')}
               className="w-full bg-innovatis-blue hover:bg-innovatis-blue/90 text-white"

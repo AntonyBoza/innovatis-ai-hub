@@ -1,0 +1,178 @@
+
+/*
+Theme Name: InnovatisAI
+Theme URI: https://innovatis.ai
+Author: InnovatisAI Team
+Author URI: https://innovatis.ai
+Description: A modern theme for InnovatisAI WordPress site
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: innovatis-ai
+Tags: innovatis, ai, artificial intelligence, consulting, corporate, business
+*/
+
+/* This is the main stylesheet for the WordPress theme */
+
+/* Import Tailwind CSS */
+@import url('src/index.css');
+
+/* Theme specific styles */
+.wp-block-paragraph {
+  margin-bottom: 1.5rem;
+}
+
+.wp-block-heading h1,
+.wp-block-heading h2,
+.wp-block-heading h3,
+.wp-block-heading h4,
+.wp-block-heading h5,
+.wp-block-heading h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.wp-block-heading h1 {
+  font-size: 2.5rem;
+}
+
+.wp-block-heading h2 {
+  font-size: 2rem;
+}
+
+.wp-block-heading h3 {
+  font-size: 1.75rem;
+}
+
+.wp-block-image {
+  margin-bottom: 1.5rem;
+}
+
+.wp-block-quote {
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.wp-block-button__link {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.wp-block-button__link:hover {
+  background-color: #2563eb;
+}
+
+/* WordPress specific classes */
+.alignleft {
+  float: left;
+  margin-right: 1.5rem;
+}
+
+.alignright {
+  float: right;
+  margin-left: 1.5rem;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  max-width: 100%;
+}
+
+.wp-caption-text {
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* InnovatisAI color scheme */
+:root {
+  --innovatis-blue: #3b82f6;
+  --innovatis-purple: #8b5cf6;
+  --innovatis-teal: #14b8a6;
+  --innovatis-gray-light: #f9fafb;
+  --innovatis-gray-dark: #4b5563;
+}
+
+/* Custom blog styles */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.blog-header {
+  padding: 4rem 0 2rem;
+  text-align: center;
+  background: linear-gradient(to right, var(--innovatis-blue), var(--innovatis-purple), var(--innovatis-teal));
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.blog-author {
+  display: flex;
+  align-items: center;
+}
+
+.blog-author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.blog-categories {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.blog-category {
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .blog-header {
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .blog-title {
+    font-size: 2rem;
+  }
+  
+  .blog-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
