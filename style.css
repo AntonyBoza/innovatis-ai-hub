@@ -4,117 +4,160 @@ Theme Name: InnovatisAI
 Theme URI: https://innovatis.ai
 Author: InnovatisAI Team
 Author URI: https://innovatis.ai
-Description: A modern theme for InnovatisAI WordPress site
+Description: A modern WordPress theme for InnovatisAI with AI consulting services and corporate solutions
 Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: innovatis-ai
-Tags: innovatis, ai, artificial intelligence, consulting, corporate, business, block-templates
 Requires at least: 5.9
 Tested up to: 6.4
 Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: innovatis-ai
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, block-templates
+
+InnovatisAI WordPress Theme, (C) 2025 InnovatisAI
 */
 
-/* This is the main stylesheet for the WordPress theme */
-
-/* Import Tailwind CSS */
-@import url('src/index.css');
-
 /* Theme specific styles */
-.wp-block-paragraph {
-  margin-bottom: 1.5rem;
+:root {
+  --innovatis-blue: #3b82f6;
+  --innovatis-purple: #8b5cf6;
+  --innovatis-teal: #14b8a6;
+  --innovatis-gray-light: #f9fafb;
+  --innovatis-gray-dark: #4b5563;
 }
 
-.wp-block-heading h1,
-.wp-block-heading h2,
-.wp-block-heading h3,
-.wp-block-heading h4,
-.wp-block-heading h5,
-.wp-block-heading h6 {
+/* Base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--innovatis-gray-dark);
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-.wp-block-heading h1 {
+h1 {
   font-size: 2.5rem;
 }
 
-.wp-block-heading h2 {
+h2 {
   font-size: 2rem;
 }
 
-.wp-block-heading h3 {
+h3 {
   font-size: 1.75rem;
 }
 
-.wp-block-image {
-  margin-bottom: 1.5rem;
-}
-
-.wp-block-quote {
-  border-left: 4px solid #3b82f6;
-  padding-left: 1rem;
-  font-style: italic;
-  margin: 1.5rem 0;
-}
-
-.wp-block-button__link {
-  display: inline-block;
-  background-color: #3b82f6;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+a {
+  color: var(--innovatis-blue);
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition: color 0.2s;
 }
 
-.wp-block-button__link:hover {
-  background-color: #2563eb;
+a:hover {
+  color: var(--innovatis-purple);
 }
 
-/* Block template support */
-.wp-block-template-part {
-  margin: 0;
+/* Header */
+.site-header {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 1rem 0;
 }
 
-.wp-site-blocks {
-  padding: 0;
-}
-
-.wp-block-query {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.wp-block-post-template {
-  display: grid;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-}
-
-.wp-block-post-title {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-}
-
-.wp-block-post-excerpt {
-  margin-top: 1rem;
-}
-
-.wp-block-post-featured-image img {
-  max-width: 100%;
-  height: auto;
-}
-
-.wp-block-query-pagination {
+.site-header .container {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-branding {
+  display: flex;
+  align-items: center;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.site-title a {
+  color: var(--innovatis-gray-dark);
+  text-decoration: none;
+}
+
+/* Navigation */
+.main-navigation ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation li {
+  margin-left: 1.5rem;
+}
+
+.main-navigation a {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--innovatis-gray-dark);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main-navigation a:hover,
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a {
+  color: var(--innovatis-blue);
+}
+
+/* Content */
+.site-main {
+  padding: 2rem 0;
+}
+
+.entry-header {
+  margin-bottom: 2rem;
+}
+
+.entry-title {
+  margin-top: 0;
+}
+
+.entry-meta {
+  color: var(--innovatis-gray-dark);
+  font-size: 0.9rem;
+}
+
+.entry-content {
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--innovatis-blue);
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* WordPress specific classes */
@@ -144,81 +187,72 @@ Requires PHP: 7.4
   text-align: center;
 }
 
-/* InnovatisAI color scheme */
-:root {
-  --innovatis-blue: #3b82f6;
-  --innovatis-purple: #8b5cf6;
-  --innovatis-teal: #14b8a6;
-  --innovatis-gray-light: #f9fafb;
-  --innovatis-gray-dark: #4b5563;
-}
-
-/* Custom blog styles */
+/* Blog listing */
 .blog-post {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  margin-bottom: 3rem;
 }
 
-.blog-header {
-  padding: 4rem 0 2rem;
-  text-align: center;
-  background: linear-gradient(to right, var(--innovatis-blue), var(--innovatis-purple), var(--innovatis-teal));
-  color: white;
-  margin-bottom: 2rem;
-}
-
-.blog-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+.blog-post .entry-title {
+  font-size: 1.75rem;
 }
 
 .blog-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid #e5e7eb;
 }
 
-.blog-author {
-  display: flex;
-  align-items: center;
+/* Button styles */
+.wp-block-button__link {
+  background-color: var(--innovatis-blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  display: inline-block;
 }
 
-.blog-author-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 1rem;
+.wp-block-button__link:hover {
+  background-color: #2563eb;
 }
 
-.blog-categories {
-  display: flex;
-  gap: 0.5rem;
+/* Block template support */
+.wp-site-blocks {
+  padding: 0;
 }
 
-.blog-category {
-  background-color: #f3f4f6;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
+.wp-block-template-part {
+  margin: 0;
 }
 
-/* Mobile responsive adjustments */
+/* Media queries */
 @media (max-width: 768px) {
-  .blog-header {
-    padding: 3rem 0 1.5rem;
-  }
-  
-  .blog-title {
-    font-size: 2rem;
-  }
-  
-  .blog-meta {
+  .site-header .container {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
   }
+  
+  .main-navigation {
+    margin-top: 1rem;
+  }
+  
+  .main-navigation ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-navigation li {
+    margin: 0.25rem 0;
+  }
+}
+
+/* WordPress blocks styling */
+.wp-block-quote {
+  border-left: 4px solid var(--innovatis-blue);
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
 }

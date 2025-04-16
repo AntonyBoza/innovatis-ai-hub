@@ -46,3 +46,38 @@
   --innovatis-gray-light: #f9fafb;
   --innovatis-gray-dark: #4b5563;
 }
+
+.wp-block-button__link {
+  background-color: var(--innovatis-blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.wp-block-quote {
+  border-left: 4px solid var(--innovatis-blue);
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.editor-styles-wrapper a {
+  color: var(--innovatis-blue);
+  text-decoration: none;
+}
