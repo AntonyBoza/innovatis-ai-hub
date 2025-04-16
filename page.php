@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-    <div class="container">
+    <div class="container mx-auto px-4 py-8">
         <?php
         while (have_posts()) :
             the_post();
@@ -29,3 +29,4 @@ get_header();
 
 <?php
 get_footer();
+?>

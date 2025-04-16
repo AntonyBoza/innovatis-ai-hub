@@ -1,4 +1,3 @@
-
 <?php
 /**
  * InnovatisAI functions and definitions
@@ -80,6 +79,16 @@ function innovatis_ai_setup() {
 
 	// Add theme support for core block template parts
 	add_theme_support( 'block-template-parts' );
+    
+    // Explicit support for core/template block
+    add_theme_support( 'core-block-patterns' );
+    
+    // Enable support for specific core blocks
+    add_theme_support( 'editor-color-palette' );
+    add_theme_support( 'editor-font-sizes' );
+    add_theme_support( 'custom-spacing' );
+    add_theme_support( 'custom-units' );
+    add_theme_support( 'appearance-tools' );
 }
 add_action( 'after_setup_theme', 'innovatis_ai_setup' );
 
